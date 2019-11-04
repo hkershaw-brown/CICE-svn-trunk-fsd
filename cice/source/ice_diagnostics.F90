@@ -120,7 +120,7 @@
       use ice_state ! everything
       use ice_therm_shared, only: calc_Tsfc
       use ice_zbgc_shared, only: rhosi
-#ifdef CCSMCOUPLED
+#ifdef CESMCOUPLED
       use ice_prescribed_mod, only: prescribed_ice
 #endif
 
@@ -770,7 +770,7 @@
 
         if (print_global) then  ! global diags for conservations checks
 
-#ifdef CCSMCOUPLED
+#ifdef CESMCOUPLED
          if (prescribed_ice) then
           write (nu_diag,*) '----------------------------'
           write (nu_diag,*)   'This is the prescribed ice option.'

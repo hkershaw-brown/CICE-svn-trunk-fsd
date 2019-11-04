@@ -299,7 +299,7 @@
       !-----------------------------------------------------------------
 !mclaren: Should there be an if calc_Tsfc statement here then?? 
 
-#ifdef CCSMCOUPLED
+#ifdef CESMCOUPLED
       frac = c1
       dTemp = p01
 #else
@@ -335,7 +335,7 @@
          enddo
       enddo
 
-#ifdef CCSMCOUPLED
+#ifdef CESMCOUPLED
       frac = 0.9_dbl_kind
 #endif
       do k = 1, nslyr

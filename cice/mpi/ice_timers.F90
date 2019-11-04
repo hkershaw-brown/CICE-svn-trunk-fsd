@@ -51,7 +51,7 @@
       timer_readwrite,        &! read/write
       timer_diags,            &! diagnostics/history
       timer_hist,             &! diagnostics/history
-#if (defined CCSMCOUPLED)
+#if (defined CESMCOUPLED)
       timer_cplrecv,          &! receive from coupler
       timer_rcvsnd,           &! time between receive to send
       timer_cplsend,          &! send to coupled
@@ -185,7 +185,7 @@
    call get_ice_timer(timer_latmelt,  'LatMelt',  nblocks,distrb_info%nprocs)
    call get_ice_timer(timer_waves,    'Waves',    nblocks,distrb_info%nprocs)
 ! LR
-#if (defined CCSMCOUPLED)
+#if (defined CESMCOUPLED)
    call get_ice_timer(timer_cplrecv,  'Cpl-recv', nblocks,distrb_info%nprocs)
    call get_ice_timer(timer_rcvsnd,   'Rcv->Snd', nblocks,distrb_info%nprocs)
    call get_ice_timer(timer_cplsend,  'Cpl-Send', nblocks,distrb_info%nprocs)

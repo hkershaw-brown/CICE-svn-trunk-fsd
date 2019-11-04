@@ -22,7 +22,7 @@
       module ice_fileunits
 
       use ice_kinds_mod
-#ifdef CCSMCOUPLED
+#ifdef CESMCOUPLED
       use shr_file_mod, only : shr_file_getunit, shr_file_freeunit
 #endif
 
@@ -155,12 +155,12 @@
 
    ! local variables
 
-#ifndef CCSMCOUPLED
+#ifndef CESMCOUPLED
    integer (kind=int_kind) :: n  ! dummy loop index
    logical (kind=log_kind) :: alreadyInUse
 #endif
 
-#ifdef CCSMCOUPLED
+#ifdef CESMCOUPLED
    iunit = shr_file_getUnit()
 #else
 
@@ -238,7 +238,7 @@
    integer (kind=int_kind), intent(in) :: &
       iunit                    ! I/O unit to be released
 
-#ifdef CCSMCOUPLED
+#ifdef CESMCOUPLED
          call shr_file_freeUnit(iunit)
 #else
 !  check for proper unit number
@@ -265,7 +265,7 @@
 
       subroutine flush_fileunit(iunit)
 
-#ifdef CCSMCOUPLED
+#ifdef CESMCOUPLED
       use shr_sys_mod, only : shr_sys_flush
 #endif
 
@@ -278,7 +278,7 @@
 !
 !-----------------------------------------------------------------------
 
-#ifdef CCSMCOUPLED
+#ifdef CESMCOUPLED
    call shr_sys_flush(iunit)
 #else
 #if (defined IRIX64 || defined CRAY || defined OSF1 || defined SUNOS || defined LINUX || defined NEC_SX | defined UNICOSMP)
