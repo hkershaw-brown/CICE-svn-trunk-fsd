@@ -1,4 +1,4 @@
-!  SVN:$Id$
+!  SVN:$Id: ice_kinds_mod.F90 700 2013-08-15 19:17:39Z eclare $
 !=======================================================================
 
 ! Defines variable precision for all common data types
@@ -13,7 +13,6 @@
 
       implicit none
       public
-      save
 
       integer, parameter :: char_len  = 80, &
                             char_len_long  = 256, &

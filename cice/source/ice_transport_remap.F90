@@ -1,4 +1,4 @@
-!  SVN:$Id$
+!  SVN:$Id: ice_transport_remap.F90 861 2014-10-21 16:44:30Z tcraig $
 !=======================================================================
 !
 ! Transports quantities using the second-order conservative remapping
@@ -36,7 +36,6 @@
       use ice_fileunits, only: nu_diag
 
       implicit none
-      save
       private
       public :: init_remap, horizontal_remap, make_masks
 

@@ -1,4 +1,4 @@
-!  SVN:$Id$
+!  SVN:$Id: ice_state.F90 704 2013-08-20 23:43:58Z eclare $
 !=======================================================================
 !
 ! Primary state variables in various configurations
@@ -37,13 +37,12 @@
       module ice_state
 
       use ice_kinds_mod
-      use ice_domain_size, only: max_blocks, ncat, max_ntrcr, n_aero
+      use ice_domain_size, only: max_blocks, ncat, max_ntrcr, n_aero, n_iso
       use ice_blocks, only: nx_block, ny_block
 
       implicit none
       private
       public :: bound_state
-      save
 
       !-----------------------------------------------------------------
       ! state of the ice aggregated over all categories
@@ -108,6 +107,7 @@
          nt_hpnd  , & ! melt pond depth
          nt_ipnd  , & ! melt pond refrozen lid thickness
          nt_aero  , & ! starting index for aerosols in ice
+         nt_iso   , & ! starting index for isotopes in ice
 ! CMB
          nt_fsd   , & ! starting index for floe size distribution
 ! CMB
@@ -135,6 +135,7 @@
          tr_pond_lvl, & ! if .true., use level-ice pond tracer
          tr_pond_topo,& ! if .true., use explicit topography-based ponds
          tr_aero     ,& ! if .true., use aerosol tracers
+         tr_iso      ,& ! if .true., use isotope tracers
          tr_brine    ,& ! if .true., brine height differs from ice thickness
 ! CMB
          tr_fsd         ! if .true., have floe size distribution  

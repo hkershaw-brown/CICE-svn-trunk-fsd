@@ -1,4 +1,4 @@
-!  SVN:$Id$
+!  SVN:$Id: ice_aerosol.F90 744 2013-09-27 22:53:24Z eclare $
 !=======================================================================
 
 ! Aerosol tracer within sea ice

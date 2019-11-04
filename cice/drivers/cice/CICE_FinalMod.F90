@@ -1,4 +1,4 @@
-!  SVN:$Id$
+!  SVN:$Id: CICE_FinalMod.F90 806 2014-07-31 19:00:00Z tcraig $
 !=======================================================================
 !
 !  This module contains routines for the final exit of the CICE model,

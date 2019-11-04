@@ -1,4 +1,4 @@
-!  SVN:$Id$
+!  SVN:$Id: ice_dyn_evp.F90 1134 2016-07-29 20:47:56Z eclare $
 !=======================================================================
 !
 ! Elastic-viscous-plastic sea ice dynamics model
@@ -40,7 +40,6 @@
       implicit none
       private
       public :: evp
-      save
 
 !=======================================================================
 

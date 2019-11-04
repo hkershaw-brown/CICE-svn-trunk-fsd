@@ -1,4 +1,4 @@
-!  SVN:$Id$
+!  SVN:$Id: ice_firstyear.F90 806 2014-07-31 19:00:00Z tcraig $
 !=======================================================================
 !
 ! First year concentration tracer for sea ice

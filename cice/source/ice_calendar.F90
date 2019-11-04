@@ -1,4 +1,4 @@
-! $Id$
+! $Id: ice_calendar.F90 732 2013-09-19 18:19:31Z eclare $
 !=======================================================================
 
 ! Calendar routines for managing time

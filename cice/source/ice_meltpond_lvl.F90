@@ -1,4 +1,4 @@
-!  SVN:$Id$
+!  SVN:$Id: ice_meltpond_lvl.F90 897 2015-01-22 01:15:53Z tcraig $
 !=======================================================================
 
 ! Level-ice meltpond parameterization
@@ -71,6 +71,7 @@
       hpnd(:,:,:) = c0
       ipnd(:,:,:) = c0
       dhsn(:,:,:) = c0
+      ffracn(:,:,:,:) = c0
 
       end subroutine init_meltponds_lvl
 

@@ -1,4 +1,4 @@
-!  SVN:$Id$
+!  SVN:$Id: ice_read_write.F90 861 2014-10-21 16:44:30Z tcraig $
 !=======================================================================
 
 ! Routines for opening, reading and writing external files
@@ -1577,6 +1577,7 @@
 !=======================================================================
 
 
+!=======================================================================
 
 ! Read a netCDF file
 ! Adapted by Alison McLaren, Met Office from ice_read

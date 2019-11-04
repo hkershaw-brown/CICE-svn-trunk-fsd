@@ -1,4 +1,4 @@
-!  SVN:$Id$
+!  SVN:$Id: ice_brine.F90 897 2015-01-22 01:15:53Z tcraig $
 !=======================================================================
 !
 ! Computes ice microstructural information for use in biogeochemistry

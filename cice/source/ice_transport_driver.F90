@@ -1,4 +1,4 @@
-!  SVN:$Id$
+!  SVN:$Id: ice_transport_driver.F90 732 2013-09-19 18:19:31Z eclare $
 !=======================================================================
 !
 ! Drivers for remapping and upwind ice transport
@@ -20,7 +20,6 @@
       implicit none
       private
       public :: init_transport, transport_remap, transport_upwind
-      save
 
       character (len=char_len), public ::     &
          advection   ! type of advection scheme used
@@ -73,7 +72,7 @@
       use ice_transport_remap, only: init_remap
 ! CMB
       use ice_state, only: nt_fsd
-! CMB
+! CMB 
       integer (kind=int_kind) ::       &
          k, nt, nt1     ! tracer indices
 

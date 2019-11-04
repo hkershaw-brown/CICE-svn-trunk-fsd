@@ -1,4 +1,4 @@
-!  SVN:$Id$
+!  SVN:$Id: ice_dyn_shared.F90 707 2013-08-22 21:21:05Z eclare $
 !=======================================================================
 
 ! Elastic-viscous-plastic sea ice dynamics model code shared with other
@@ -19,7 +19,6 @@
       private
       public :: init_evp, set_evp_parameters, stepu, principal_stress, &
                 evp_prep1, evp_prep2, evp_finish
-      save
 
       ! namelist parameters
 
@@ -567,6 +566,10 @@
          watery(i,j) = vocn(i,j)*cosw + uocn(i,j)*sinw*sign(c1,fm(i,j))
 
          ! combine tilt with wind stress
+#ifdef CESMCOUPLED
+#define coupled
+#endif
+
 #ifndef coupled
          ! calculate tilt from geostrophic currents if needed
          strtltx(i,j) = -fm(i,j)*vocn(i,j)

@@ -1,4 +1,4 @@
-!  SVN:$Id$
+!  SVN:$Id: ice_history_mechred.F90 700 2013-08-15 19:17:39Z eclare $
 !=======================================================================
 
 ! Mechanical redistribution history output
@@ -13,7 +13,6 @@
       implicit none
       private
       public :: accum_hist_mechred, init_hist_mechred_2D, init_hist_mechred_3Dc
-      save
       
       !---------------------------------------------------------------
       ! flags: write to output file if true or histfreq value
@@ -81,7 +80,7 @@
       use ice_exit, only: abort_ice
       use ice_fileunits, only: nu_nml, nml_filename, &
           get_fileunit, release_fileunit
-      use ice_history_shared, only: tstr2D, tcstr, define_hist_field
+      use ice_history_shared, only: tstr2D, tcstr, define_hist_field, f_CMIP
       use ice_state, only: tr_lvl
 
       integer (kind=int_kind) :: ns
@@ -111,6 +110,8 @@
          close (nu_nml)
          call abort_ice('ice: error reading icefields_mechred_nml')
       endif
+
+      if (f_CMIP(1:1) /= 'x') f_ardg = 'mxxxx'
 
       if (.not. tr_lvl) then
          f_ardg = 'x'

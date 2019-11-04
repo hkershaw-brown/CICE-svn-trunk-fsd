@@ -1,4 +1,4 @@
-!  SVN:$Id$
+!  SVN:$Id: ice_zbgc_shared.F90 745 2013-09-28 18:22:36Z eclare $
 !=======================================================================
 !
 ! Biogeochemistry variables

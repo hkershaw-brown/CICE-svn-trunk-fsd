@@ -1,4 +1,4 @@
-!  SVN:$Id$
+!  SVN:$Id: ice_dyn_eap.F90 1134 2016-07-29 20:47:56Z eclare $
 !=======================================================================
 !
 ! Elastic-anisotropic sea ice dynamics model
@@ -25,7 +25,6 @@
       implicit none
       private
       public :: eap, init_eap, write_restart_eap, read_restart_eap
-      save
 
       ! Look-up table needed for calculating structure tensor
       integer (int_kind), parameter :: & 

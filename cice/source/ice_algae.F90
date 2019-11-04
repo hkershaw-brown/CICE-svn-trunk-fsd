@@ -1,4 +1,4 @@
-!  SVN:$Id$
+!  SVN:$Id: ice_algae.F90 806 2014-07-31 19:00:00Z tcraig $
 !=======================================================================
 !
 ! Compute biogeochemistry in the skeletal layer

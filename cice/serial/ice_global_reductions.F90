@@ -1,4 +1,4 @@
-!  SVN:$Id$
+!  SVN:$Id: ice_global_reductions.F90 700 2013-08-15 19:17:39Z eclare $
 !|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
  module ice_global_reductions

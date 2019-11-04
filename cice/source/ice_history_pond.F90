@@ -1,4 +1,4 @@
-!  SVN:$Id$
+!  SVN:$Id: ice_history_pond.F90 700 2013-08-15 19:17:39Z eclare $
 !=======================================================================
 
 ! Melt pond history output
@@ -13,7 +13,6 @@
       implicit none
       private
       public :: accum_hist_pond, init_hist_pond_2D, init_hist_pond_3Dc
-      save
       
       !---------------------------------------------------------------
       ! flags: write to output file if true or histfreq value
